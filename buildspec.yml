@@ -1,6 +1,15 @@
 version: 0.2
 
 phases:
+  pre_build:
+    commands:
+      - echo Installing Ansible...
+      - apt-get update
+      - apt-get install -y software-properties-common
+      - apt-add-repository ppa:ansible/ansible
+      - apt-get update
+      - apt-get install -y ansible
+
   build:
     commands:
       - ansible --version
