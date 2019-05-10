@@ -88,7 +88,7 @@ resource "aws_codebuild_project" "build" {
 
   source {
     type            = "GITHUB"
-    location        = "https://github.com/FindAPattern/cloud-build-custom-environment.git"
+    location        = "https://github.com/3141592/code-build-custom-environment"
     git_clone_depth = 1
   }
 
